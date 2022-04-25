@@ -1,0 +1,29 @@
+node {
+    stage('git clone') {
+        powershell ('https://github.com/shajahan7866/tahaan-jenkins.git')
+
+    }
+
+    stage('maven clean') {
+      powershell ('maven clean')
+    }
+
+    stage('maven validate') {
+      powershell ('maven validate')
+    }
+
+    stage('maven compile') {
+       powershell ('maven compile')
+    
+   }
+
+    stage('maven test') {
+       powershell ('maven test')
+    }
+
+    stage('maven package') {
+    	powershell ('maven package')
+    }
+
+    }
+        
